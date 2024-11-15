@@ -15,7 +15,7 @@ console.log(date4);
 
 // 3. 시간 요소들을 추출하는 방법
 let year = date1.getFullYear();
-let month = date1.getMonth();
+let month = date1.getMonth() + 1; // 월은 1월부터 시작이므로 +1을 해줘야 해~
 let date = date1.getDate();
 
 let hour = date1.getHours();
@@ -23,3 +23,17 @@ let minute = date1.getMinutes();
 let seconds = date1.getSeconds();
 
 console.log(year, month, date, hour, minute, seconds);
+
+// 4. 시간 수정하기
+date1.setFullYear(2023);
+date1.setMonth(2); // -> 3월이 될 것
+date1.setDate(30);
+date1.setHours(23);
+date1.setMinutes(59);
+date1.setSeconds(59);
+
+console.log(date1);
+
+// 5. 시간을 여러 포멧으로 출력하기
+console.log(date1.toDateString()); // 시간제외날짜만
+console.log(date1.toLocaleString()); // 현지 시간방식으로 출력
